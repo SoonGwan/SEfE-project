@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 class WorldAirQuality {
     async AirQuality(local) {

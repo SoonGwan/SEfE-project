@@ -1,3 +1,4 @@
+/* eslint-disable */
 import axios from "axios";
 
 class Arctic_Sea_Ice_Minimum {

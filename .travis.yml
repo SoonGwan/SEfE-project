@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "10.15"
+branches:
+  only:
+    - master
+    - develop
+  except:
+before_install:
+  - npm install -g yarn
+cache:
+  yarn: false
+install:
+  - yarn install
+script:
+  - yarn test
+

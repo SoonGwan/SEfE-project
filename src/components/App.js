@@ -6,14 +6,13 @@ import {
   Redirect,
   Router,
 } from 'react-router-dom';
-
-import Main from 'components/Main/Main';
+import MainPage from './Page/MainPage';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Main} />
+        <Route exact path="/" component={MainPage} />
         <Redirect to="/notfound" />
       </Switch>
     </BrowserRouter>

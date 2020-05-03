@@ -4,7 +4,7 @@ import './Main.scss';
 const Main = () => {
   return (
     <>
-      <div className="Main"></div>
+      <div className="Main">123122131231231231231231231231</div>
     </>
   );
 };

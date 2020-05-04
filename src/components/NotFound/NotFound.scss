@@ -1,0 +1,47 @@
+@import 'util/color.scss';
+.NotFound {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  vertical-align: middle;
+  &-wrap {
+    width: 710px;
+    height: 500px;
+    // margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: inherit;
+    // display: inline-block;
+    &-text {
+      position: relative;
+      font-size: 30px;
+      color: $live_powBule;
+      font-weight: bold;
+      top: 50px;
+      letter-spacing: -1px;
+    }
+    &-notFound {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $live_skyPowBlue;
+      position: relative;
+      top: 100px;
+      letter-spacing: -1px;
+    }
+    &-img {
+      width: 200px;
+      height: 400px;
+      position: relative;
+      bottom: 117px;
+    }
+  }
+}

@@ -14,8 +14,7 @@ const NotFound = () => {
             어라? 여기는 막다른 길이에요!
           </div>
           <div className="NotFound-wrap-notFound">
-            {/* 어라? 길을 잘못 들어선것 같아요! */}
-            Page not Found <b>__</b> <br /> <b>404</b>
+            Page not Found <b>__:D</b> <br /> <b>404</b>
           </div>
           <img className="NotFound-wrap-img" src={Man1} alt={Man1} />
         </div>

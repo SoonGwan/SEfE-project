@@ -1,0 +1,48 @@
+@import '../../util/color.scss';
+
+.News {
+  padding: 40px;
+  width: 100%;
+  height: 100vh;
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 300;
+
+  &-left {
+    width: 1000px;
+    &-newsBox {
+      width: 100%;
+      margin: 50px 0px 50px 0px;
+      //   display: flex;
+      &-side {
+        // float: right;
+        display: flex;
+        flex-direction: column;
+      }
+      &-img {
+        float: left;
+        background-color: $gray3;
+        width: 400px;
+        height: 200px;
+        margin-right: 50px;
+      }
+      &-title {
+        display: flex;
+        font-size: 30px;
+        margin-bottom: 12.5px;
+      }
+      &-subtitle {
+        padding: 4px 4px 4px 0px;
+        width: 100%;
+        height: 120px;
+        color: $gray2;
+        font-size: 16px;
+      }
+      &-more {
+        margin-top: 14px;
+        position: relative;
+        margin-left: auto;
+        top: 0;
+      }
+    }
+  }
+}

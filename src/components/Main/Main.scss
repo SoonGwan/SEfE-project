@@ -1,4 +1,8 @@
+@import '../../util/color.scss';
+
 .Main {
+  font-family: 'NanumBarunGothic', sans-serif;
+  font-weight: 300;
   width: 100%;
   height: 100vh;
   user-select: none;
@@ -39,7 +43,7 @@
   }
 
   &-LinkBox {
-    background-color: #191B26;
+    background-color: #191b26;
     color: white;
     list-style: none;
     font-size: 1.25rem;

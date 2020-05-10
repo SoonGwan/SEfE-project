@@ -1,3 +1,21 @@
+@import "../../../util/color.scss";
+
 .TopNav {
-  background-color: yellow;
+  position: relative;
+  width: 100%;
+
+  &-Contents {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    z-index: 5;
+
+    & > * {
+      margin: 0.75rem 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $white;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import TopNav from '../TopNav/TopNav';
+import TopNav from '../TopNav';
 import Footer from '../Footer/Footer';
 import PropTypes from 'prop-types';
 

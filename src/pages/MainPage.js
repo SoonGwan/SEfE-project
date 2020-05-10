@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from 'components/Main/Main';
+import Main from 'components/Main';
 import MainTemplate from 'components/common/Template/MainTemplate';
 
 const MainPage = () => {

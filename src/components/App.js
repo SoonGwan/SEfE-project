@@ -10,12 +10,14 @@ import {
 
 import MainPage from 'pages/MainPage';
 import NotFoundPage from 'pages/NotFoundPage';
+import News from './News/News';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={MainPage} />
+        <Route exact path="/newsTest" component={News} />
         <Route path="/notfound" component={NotFoundPage} />
         <Redirect to="/notfound" />
       </Switch>

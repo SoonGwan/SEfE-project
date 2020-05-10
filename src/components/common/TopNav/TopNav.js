@@ -3,9 +3,16 @@ import './TopNav.scss';
 
 const TopNav = () => {
   return (
-    <>
-      <h1 className="TopNav"> 여기는 nav 컴포넌트 입니다.</h1>
-    </>
+    <div className="TopNav">
+      <ul className ="TopNav-Contents">
+        <li>Logo</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>En | Kr</li>
+      </ul>
+    </div>
   );
 };
 

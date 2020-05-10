@@ -1,5 +1,59 @@
 .Main {
   width: 100%;
   height: 100vh;
-  background-color: #e3e3e3;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  &-Background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: fill;
+  }
+
+  &-ContentsBox {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50vh;
+    height: 65%;
+    overflow-y: auto;
+    margin-top: 2.5%;
+    margin-left: 5%;
+
+    &-Contents {
+      padding-left: 1.5rem;
+      padding-top: 1rem;
+      color: white;
+
+      &-Title {
+        font-weight: bold;
+      }
+
+      &-Item {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &-LinkBox {
+    background-color: #191B26;
+    color: white;
+    list-style: none;
+    font-size: 1.25rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & > li {
+      cursor: pointer;
+    }
+  }
 }

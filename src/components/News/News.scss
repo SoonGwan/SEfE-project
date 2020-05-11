@@ -6,12 +6,23 @@
   height: 100vh;
   font-family: 'NanumBarunGothic', sans-serif;
   font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  // // flex-wrap: wrap;
+  // flex-direction: column;
+  // justify-content: flex-end;
 
   &-left {
     width: 1000px;
+
     &-newsBox {
       width: 100%;
       margin: 50px 0px 50px 0px;
+      &-date {
+        font-size: 12px;
+        margin-bottom: 12.5px;
+        text-align: right;
+      }
       &-side {
         display: flex;
         flex-direction: column;
@@ -26,12 +37,11 @@
       &-title {
         display: flex;
         font-size: 30px;
-        margin-bottom: 12.5px;
       }
       &-subtitle {
         padding: 4px 4px 4px 0px;
         width: 100%;
-        height: 120px;
+        height: 70px;
         color: $gray2;
         font-size: 16px;
       }
@@ -39,6 +49,33 @@
         margin-top: 14px;
         position: relative;
         margin-left: auto;
+      }
+    }
+  }
+  &-M {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+
+    &-right {
+      width: 400px;
+      &-Box {
+        &-img {
+          width: 400px;
+          height: 500px;
+          background-color: $gray3;
+        }
+        &-title {
+          padding: 5px;
+          font-size: 30px;
+          color: $gray2;
+        }
+        &-date {
+        }
+        &-sub {
+        }
       }
     }
   }

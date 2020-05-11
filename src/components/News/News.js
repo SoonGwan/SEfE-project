@@ -1,28 +1,69 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './News.scss';
-const News = () => {
+import moment from 'moment';
+import { FaAngleRight } from 'react-icons/fa';
+
+const News = ({ newsList, imgLoading }) => {
+  console.log(newsList);
+  const newsListTemplate = newsList.map((data) => {
+    const { description, link, originallink, pubDate, title } = data;
+    return (
+      <>
+        <div className="News-left-newsBox">
+          <div className="News-left-newsBox-img"></div>
+          <div className="News-left-newsBox-side">
+            <div className="News-left-newsBox-title">
+              {title.replace(
+                /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
+                ''
+              )}
+            </div>
+            <div className="News-left-newsBox-date">
+              {moment.parseZone(pubDate).format('YYYY-MM-DD HH:SS')}
+            </div>
+            <div className="News-left-newsBox-subtitle">
+              {description.replace(
+                /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
+                ''
+              )}
+            </div>
+            <div className="News-left-newsBox-more">
+              <a href={link}>
+                More
+                <FaAngleRight
+                  style={{ verticalAlign: 'bottom', fontSize: '20px' }}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  });
+
   return (
     <>
       <div className="News">
         <div className="News-left">
-          <div className="News-left-newsBox">
-            <div className="News-left-newsBox-img"></div>
-            <div className="News-left-newsBox-side">
-              <div className="News-left-newsBox-title">
-                이곳은 뉴스 타이틀이 들어가는 곳입니다.
+          {imgLoading === true ? (
+            <>
+              <div>로딩컴포넌트 넣을거 생각좀</div>
+            </>
+          ) : (
+            <>{newsListTemplate}</>
+          )}
+        </div>
+        <div className="News-M">
+          <div className="News-M-right">
+            <div className="News-M-right-Box">
+              <div className="News-M-right-Box-img"></div>
+              <div className="News-M-right-Box-title">
+                여기에 무슨 문구가 들어가면 잘 들어갔다고 소문이 날까요?
               </div>
-              <div className="News-left-newsBox-subtitle">
-                컬러는 gray2 입니다. 뉴스 내용이 조금 보여지는 곳 입니다 . 다른
-                컨텐츠로 내용 변경 및 수정시 도움이 필요한 경우 아니면 따로 상의
-                없이 수정해도 됩니다.컬러는 gray2 입니다. 뉴스 내용이 조금
-                보여지는 곳 입니다 . 다른 컨텐츠로 내용 변경 및 수정시 도움이
-                필요한 경우 아니면 따로 상의 없이 수정해도 됩니다.
-              </div>
-              <div className="News-left-newsBox-more">More--</div>
             </div>
           </div>
         </div>
-        <div className="News-right"></div>
       </div>
     </>
   );

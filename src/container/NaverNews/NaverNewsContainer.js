@@ -4,28 +4,31 @@ import { useEffect } from 'react';
 import News from 'components/News/News';
 
 const NaverNewsContainer = ({ store }) => {
-  const { handleSearchNews } = store.NewsSearch;
-  const { imgLoading, setImgLoading } = useState(false);
-  const { newsList, setNewsList } = useState([]);
+  const { handleSearchNews, newsList } = store.NewsSearch;
+  const [imgLoading, setImgLoading] = useState(false);
+  // const { newsList, setNewsList } = useState([]);
 
   const requestSearchNews = useCallback(async () => {
+    setImgLoading(true);
     await handleSearchNews()
-      .then((resposne) => {
+      .then((response) => {
         setImgLoading(false);
-        console.log(resposne);
+        // setNewsList(response.data.items);
+        console.log(newsList);
       })
       .catch((error) => {
+        setImgLoading(false);
         return error;
       });
   });
 
   useEffect(() => {
     requestSearchNews();
-  });
+  }, []);
 
   return (
     <>
-      <News />
+      <News newsList={newsList} imgLoading={imgLoading} />
     </>
   );
 };

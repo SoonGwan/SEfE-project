@@ -4,10 +4,13 @@ import NaverNewsRepository from 'assets/api/NaverNews';
 
 @autobind
 class NaverNewsStore {
+  @observable newsList = [];
+
   @action
   handleSearchNews = async () => {
     try {
       const response = await NaverNewsRepository.handleSearchNews();
+      this.newsList = response.data.items;
       return new Promise((resolve, reject) => {
         resolve(response);
       });

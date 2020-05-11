@@ -10,7 +10,8 @@ import {
 
 import MainPage from 'pages/MainPage';
 import NotFoundPage from 'pages/NotFoundPage';
-import News from './News/News';
+// import News from './News/News';
+import News from 'container/NaverNews/NaverNewsContainer';
 
 const App = () => {
   return (

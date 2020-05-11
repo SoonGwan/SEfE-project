@@ -12,9 +12,7 @@
     &-newsBox {
       width: 100%;
       margin: 50px 0px 50px 0px;
-      //   display: flex;
       &-side {
-        // float: right;
         display: flex;
         flex-direction: column;
       }
@@ -41,7 +39,6 @@
         margin-top: 14px;
         position: relative;
         margin-left: auto;
-        top: 0;
       }
     }
   }

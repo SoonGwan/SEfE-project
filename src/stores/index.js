@@ -7,8 +7,10 @@ const stores = {
   Login: new Login()
 };
 */
+import NaverNewsStore from 'stores/NaverNews/NaverNewsStore';
+
 const stores = {
-    
+  NewsSearch: new NaverNewsStore(),
 };
 
 export default stores;

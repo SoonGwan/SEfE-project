@@ -1,16 +1,16 @@
 /* eslint-disable */
 import axios from 'axios';
-import { SERVER, clientId, clientSecret } from 'config/config.json';
+import { SERVER } from 'config/config.json';
 
 class NaverNewsRepository {
   handleSearchNews = async () => {
     try {
-      const { data } = await axios.get(`${SERVER}?query=naver`, {
-        headers: {
-          'X-Naver-Client-Id': clientId,
-          'X-Naver-Client-Secret': clientSecret,
-        },
-      });
+      const { data } = await axios.get(`${SERVER}?query=naver`);
+      // ↓↓↓↓↓ Query Parameters
+      // query: 검색어
+      // sort=sim : 정확도순, sort=date : 날짜순
+      // display: 검색결과 최대 출력수 (기본값 10)
+      // start: 검색 시작위치 (최대 1000)
       return data;
     } catch (error) {
       throw error;

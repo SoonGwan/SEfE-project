@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import './News.scss';
@@ -33,7 +34,7 @@ const News = ({ newsList, imgLoading }) => {
                 .replace('&quot;', '')}
             </div>
             <div className="News-left-newsBox-more">
-              <a href={link}>
+              <a href={link} target="_blank">
                 More
                 <FaAngleRight
                   style={{ verticalAlign: 'bottom', fontSize: '20px' }}

@@ -1,7 +1,6 @@
 import React from 'react';
 import './Main.scss';
 import tree from 'assets/img/tree.png';
-import NaverNewsContainer from 'container/NaverNews/NaverNewsContainer';
 
 const Main = () => {
   return (
@@ -31,7 +30,6 @@ const Main = () => {
           <li>Link6</li>
         </ul>
       </div>
-      <NaverNewsContainer />
     </>
   );
 };

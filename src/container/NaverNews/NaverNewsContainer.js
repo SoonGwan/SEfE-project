@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { inject, observer } from 'mobx-react';
 import { useEffect } from 'react';
 import News from 'components/News/News';
+import PropTypes from 'prop-types';
 
 const NaverNewsContainer = ({ store }) => {
   const { handleSearchNews, newsList } = store.NewsSearch;

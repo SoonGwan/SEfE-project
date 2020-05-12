@@ -33,4 +33,8 @@ const NaverNewsContainer = ({ store }) => {
   );
 };
 
+NaverNewsContainer.propTypes = {
+  store: PropTypes.any,
+};
+
 export default inject('store')(observer(NaverNewsContainer));

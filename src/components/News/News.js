@@ -14,19 +14,23 @@ const News = ({ newsList, imgLoading }) => {
           <div className="News-left-newsBox-img"></div>
           <div className="News-left-newsBox-side">
             <div className="News-left-newsBox-title">
-              {title.replace(
-                /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
-                ''
-              )}
+              {title
+                .replace(
+                  /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>| &quot;/gi,
+                  ''
+                )
+                .replace(/&quot;|&nbsp;|&lt;|&gt;|&amp;|&#035;|&#039;/, '')}
             </div>
             <div className="News-left-newsBox-date">
               {moment.parseZone(pubDate).format('YYYY-MM-DD HH:SS')}
             </div>
             <div className="News-left-newsBox-subtitle">
-              {description.replace(
-                /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
-                ''
-              )}
+              {description
+                .replace(
+                  /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
+                  ''
+                )
+                .replace('&quot;', '')}
             </div>
             <div className="News-left-newsBox-more">
               <a href={link}>

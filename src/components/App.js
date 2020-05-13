@@ -10,15 +10,16 @@ import {
 
 import MainPage from 'pages/MainPage';
 import NotFoundPage from 'pages/NotFoundPage';
+import Graph from 'components/Graph/Graph';
 // import News from './News/News';
-import News from 'container/NaverNews/NaverNewsContainer';
+// import News from 'container/NaverNews/NaverNewsContainer';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={MainPage} />
-        <Route exact path="/newsTest" component={News} />
+        <Route exact path="/newsTest" component={Graph} />
         <Route path="/notfound" component={NotFoundPage} />
         <Redirect to="/notfound" />
       </Switch>

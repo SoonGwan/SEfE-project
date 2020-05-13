@@ -17,10 +17,10 @@ const News = ({ newsList, imgLoading }) => {
             <div className="News-left-newsBox-title">
               {title
                 .replace(
-                  /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>| &quot;/gi,
+                  /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
                   ''
                 )
-                .replace(/&quot;|&nbsp;|&lt;|&gt;|&amp;|&#035;|&#039;/, '')}
+                .replace(/&quot;/gi, '')}
             </div>
             <div className="News-left-newsBox-date">
               {moment.parseZone(pubDate).format('YYYY-MM-DD HH:SS')}
@@ -31,7 +31,7 @@ const News = ({ newsList, imgLoading }) => {
                   /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
                   ''
                 )
-                .replace('&quot;', '')}
+                .replace(/&quot;/gi, '')}
             </div>
             <div className="News-left-newsBox-more">
               <a href={link} target="_blank">

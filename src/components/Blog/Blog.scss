@@ -1,0 +1,84 @@
+@import '../../util/color.scss';
+
+.Blog {
+    &-Banner {
+       background-image: url('../../assets/img/earthbanner.png');
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+       & > * {
+           margin-right: 5rem;
+       }
+
+       &-Top {
+           padding-top: 4rem;
+           padding-bottom: 4rem;
+           text-align: right;
+
+           & > p {
+               font-size: 2rem;
+               color: $white;
+               font-weight: bold;
+           }
+
+           &-Contents {
+               color: $main_lg !important;
+               font-weight: 100 !important;
+               margin-bottom: 1rem;
+               font-size: 1.5rem !important;
+           }
+
+           &-Button {
+               border: none;
+               outline: none;
+               background-color: $main_lg;
+               color: $white;
+               width: 20%;
+               padding: 10px 0;
+               cursor: pointer;
+           }
+       }
+    }
+
+    &-ArticleZone {
+        padding: 3rem 5rem;
+        &-Title {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        &-Article {
+            display: flex;
+            /* 나중에 media query 사용시 몇 px이하로 갈시 display를 block으로 변경 */
+            justify-content: center;
+
+            &-Item {
+                position: relative;
+                margin-right: 2rem;
+                & > * {
+                    margin: 10px 0;
+                }
+
+                &-Box {
+                    min-height: 25vh;
+                    max-height: 30vh;
+                    background-color: $gray3;
+                }
+
+                &-Title {
+                    color: $sub1_lg;
+                    text-align: center;
+                }
+
+                &-Link {
+                    position: absolute;
+                    right: 0;
+                    bottom: -2rem;
+                }
+            }
+        }
+    }
+}

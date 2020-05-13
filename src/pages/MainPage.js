@@ -10,8 +10,8 @@ const MainPage = () => {
     <MainTemplate>
       <Main />
       <NaverNewsContainer />
-      <NaverBlogContainer />
       <Graph />
+      <NaverBlogContainer />
     </MainTemplate>
   );
 };

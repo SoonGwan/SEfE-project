@@ -9,16 +9,18 @@ const Blog = ({ blogList }) => {
         return (
             <div className ="Blog-ArticleZone-Article-Item" key ={index}>
                 <div className ="Blog-ArticleZone-Article-Item-Box"></div>
-                <div className ="Blog-ArticleZone-Article-Item-Title">{title.replace(
+                <div className ="Blog-ArticleZone-Article-Item-Title">{title
+                .replace(
                   /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
                   ''
                 )
-                .replace(/&quot;/gi, '')}}</div>
-                <div className ="Blog-ArticleZone-Article-Item-description">{description.replace(
+                .replace(/&quot;/gi, '')}</div>
+                <div className ="Blog-ArticleZone-Article-Item-description">{description
+                .replace(
                   /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
                   ''
                 )
-                .replace(/&quot;/gi, '')}}</div>
+                .replace(/&quot;/gi, '')}</div>
                 <div className ="Blog-ArticleZone-Article-Item-Link">
                 <a href={link} target="_blank" rel ="noopener noreferrer">
                     More

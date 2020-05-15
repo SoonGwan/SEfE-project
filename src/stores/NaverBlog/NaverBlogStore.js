@@ -11,7 +11,6 @@ class NaverBlogStore {
   handleSearchBlog = async () => {
     try {
       const response = await NaverBlogRepository.handleSearchBlog();
-      console.log(response.data.items);
       this.blogList = response.data.items;
       return new Promise((resolve, reject) => {
         resolve(response);

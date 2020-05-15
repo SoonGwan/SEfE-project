@@ -45,9 +45,7 @@ const Blog = ({ blogList }) => {
 
             <div className ="Blog-ArticleZone">
                 <div className ="Blog-ArticleZone-Title">Earth Blog</div>
-                <div className ="Blog-ArticleZone-Article">
-                    {blogLists}
-                </div>
+                <div className ="Blog-ArticleZone-Article">{blogLists}</div>
             </div>
         </div>
     );

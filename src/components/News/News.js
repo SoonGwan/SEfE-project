@@ -55,7 +55,7 @@ const News = ({ newsList, imgLoading }) => {
         <div className="News-left">
           {imgLoading === true ? (
             <>
-              <div>로딩컴포넌트 넣을거 생각좀</div>
+              <div>로딩중</div>
             </>
           ) : (
             <>{newsListTemplate}</>

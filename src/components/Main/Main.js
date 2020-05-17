@@ -5,6 +5,9 @@ import tree from 'assets/img/tree.png';
 import Dust from 'assets/img/Dust.png';
 import co2 from 'assets/img/co2.png';
 import SeaLevel from 'assets/img/SeaLevel.png';
+import naturalgas from 'assets/img/naturalgas.png';
+import oil from 'assets/img/oil.png';
+import coal from 'assets/img/coal.png';
 
 const Main = ({ airQuality, seaLength }) => {
   return (
@@ -28,21 +31,21 @@ const Main = ({ airQuality, seaLength }) => {
         <div className ="Main-LinkBox">
           <ul className="Main-LinkBox-Item">
             <div className ="Main-LinkBox-Item-Dust">
-              <img src ={Dust} alt ="dust" />
-              <div>미세먼지 농도</div>
-              <span style ={{ color: 'green' }}>{airQuality}ppm</span>
+              <img src ={oil} alt ="dust" />
+              <div>남은 석유 사용시간</div>
+              <span style ={{ color: 'green' }}>40년</span>
             </div>
 
             <div className ="Main-LinkBox-Item-Dust">
-              <img src ={Dust} alt ="dust" />
-              <div>미세먼지 농도</div>
-              <span style ={{ color: 'green' }}>{airQuality}ppm</span>
+              <img src ={naturalgas} alt ="dust" />
+              <div>남은 천연가스 사용기간</div>
+              <span style ={{ color: 'green' }}>60년</span>
             </div>
 
             <div className ="Main-LinkBox-Item-Dust">
-              <img src ={Dust} alt ="dust" />
-              <div>미세먼지 농도</div>
-              <span style ={{ color: 'green' }}>{airQuality}ppm</span>
+              <img src ={coal} alt ="dust" />
+              <div>남은 석탄 사용기간</div>
+              <span style ={{ color: 'green' }}>230년</span>
             </div>
 
             <div className ="Main-LinkBox-Item-Dust">

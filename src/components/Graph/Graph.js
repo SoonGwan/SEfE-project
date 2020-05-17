@@ -1,5 +1,7 @@
 import React from 'react';
 import './Graph.scss';
+import GraphChart from './GraphChart/GraphChart';
+import LabelLine from './GraphChart/GraphChart';
 
 const Graph = () => {
   return (
@@ -8,7 +10,9 @@ const Graph = () => {
         <div className="Graph-title">지구는 이렇게 되고 있습니다 그래프.</div>
         <div className="Graph-subTitle">English Title Here</div>
         <div className="Graph-wrap">
-          <div className="Graph-wrap-box">Graph-Box</div>
+          <div className="Graph-wrap-box">
+            <GraphChart />
+          </div>
           <div className="Graph-wrap-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

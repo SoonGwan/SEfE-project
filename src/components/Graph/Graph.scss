@@ -21,10 +21,10 @@
     flex-direction: row;
     justify-content: space-between;
     &-box {
-      border: 2px solid $gray3;
-      width: 1000px;
+      width: 800px;
       height: 400px;
     }
+
     &-text {
       color: $gray1;
       width: 700px;

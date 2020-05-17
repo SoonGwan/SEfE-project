@@ -46,10 +46,13 @@
     background-color: #191b26;
     color: white;
     position: absolute;
+    max-height: 25%;
+    overflow: auto;
     bottom: 0;
     left: 0;
     right: 0;
     font-size: 1.25rem;
+    padding-top: 5px;
 
     &-Danger {
       padding: 5px 0;

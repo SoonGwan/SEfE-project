@@ -6,7 +6,6 @@ import moment from 'moment';
 import { FaAngleRight } from 'react-icons/fa';
 
 const News = ({ newsList, imgLoading }) => {
-  console.log(newsList);
   const newsListTemplate = newsList.map((data) => {
     const { description, link, originallink, pubDate, title } = data;
     return (

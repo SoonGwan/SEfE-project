@@ -45,19 +45,39 @@
   &-LinkBox {
     background-color: #191b26;
     color: white;
-    list-style: none;
-    font-size: 1.25rem;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 15%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    font-size: 1.25rem;
 
-    & > li {
-      cursor: pointer;
+    &-Danger {
+      padding: 5px 0;
+      margin-right: 10px;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+
+      & > li {
+        margin-left: 1rem;
+        font-size: 14px;
+      }
+    }
+
+    &-Item {
+      list-style: none;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      &-Dust {
+        text-align: center;
+        & > img {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
     }
   }
 }

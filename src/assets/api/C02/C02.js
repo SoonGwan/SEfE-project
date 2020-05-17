@@ -5,7 +5,7 @@ class C02 {
   async co2process() {
     try {
       const { data } = await axios.get(
-        " http://www.hqcasanova.com/co2?callback=process"
+        "http://www.hqcasanova.com/co2?callback=process"
       );
       return data;
     } catch (error) {

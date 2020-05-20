@@ -27,6 +27,7 @@ const GraphChart = () => {
         animation: 'clipingWithData',
       },
     },
+    color: '#eb962a',
   };
   useEffect(() => {
     setData(coJSON);
